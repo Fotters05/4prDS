@@ -1,0 +1,35 @@
+﻿<Page x:Class="Praktika1_DataSet.Fourth"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Praktika1_DataSet"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="First">
+
+
+    <Grid Margin="0,10,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="SushiDataGrid" Grid.Row="0" Grid.ColumnSpan="2" SelectionChanged="SushiDataGrid_SelectionChanged"/>
+        <Button Content="Закрыть окно" Click="ShowMainButton_Click" Grid.Row="3" Grid.Column="1" HorizontalAlignment="right" VerticalAlignment="Top" Margin="10"/>
+        <Button Content="Добавить данные" Click="Dobavlenie_Click" Grid.Row="3" Grid.Column="0" HorizontalAlignment="left" VerticalAlignment="Top" Margin="10"/>
+        <Button Content="Обновить данные" Click="Update" Grid.Row="3" Grid.Column="0" HorizontalAlignment="center" VerticalAlignment="Top" Margin="10"/>
+        <Button Content="Удалить данные" Click="Udalenie_Click" Grid.Row="3" Grid.Column="0" HorizontalAlignment="right" VerticalAlignment="Top" Margin="10"/>
+        <ComboBox x:Name="SUSHIBARSComboBox"  Margin="61,193,183,60" SelectionChanged="SUSHIBARSComboBox_SelectionChanged"/>
+        <ComboBox x:Name="SUSHISETSComboBox" Margin="322,193,322,60" SelectionChanged="SUSHISETSComboBox_SelectionChanged" RenderTransformOrigin="0.505,0.533" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="CLIENTSSComboBox"  Margin="194,192,50,60" SelectionChanged="CLIENTSSComboBox_SelectionChanged" Grid.Column="1"/>
+
+
+    </Grid>
+</Page>
